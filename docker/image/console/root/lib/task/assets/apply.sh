@@ -22,6 +22,6 @@ function task_assets_apply()
 
     for file in "/app/${ASSETS_DIR}/"*.files.{tgz,tar.gz}; do
         [ -f "$file" ] || continue
-        run "tar -zxvf ${file} -C /app"
+        run "tar -xvf ${file} -C /app"
     done
 }
